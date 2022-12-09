@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from things.forms import PostForm
+from things.forms import ThingForm
 
 def home(request):
-    form = PostForm(request.POST or None)
+    form = ThingForm(request.POST or None)
     return render(request, 'home.html', {'form': form})

@@ -4,7 +4,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from things.models import Thing
 # Create your forms here.
 
-class PostForm(forms.Form):
+class ThingForm(forms.Form):
 
     name = forms.CharField(max_length=35)
     description = forms.CharField(max_length=120 ,widget=forms.Textarea(attrs={'name':'body', 'style': 'height: 3em;'}))
