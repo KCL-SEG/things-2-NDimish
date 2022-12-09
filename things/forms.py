@@ -7,7 +7,7 @@ from things.models import Thing
 class PostForm(forms.Form):
 
     name = forms.CharField(max_length=35)
-    description = forms.CharField(max_length=120)
+    description = forms.CharField(max_length=120 ,widget=forms.Textarea(attrs={'name':'body', 'style': 'height: 3em;'}))
     quantity = forms.IntegerField(
         validators=[MinValueValidator(0),MaxValueValidator(50)]
     )
